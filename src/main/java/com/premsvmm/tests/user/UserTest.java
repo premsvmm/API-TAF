@@ -11,7 +11,7 @@ import static com.premsvmm.controllers.TestGroups.USER;
 
 public class UserTest extends UserBase {
 
-    @Test(enabled = true, alwaysRun = true, dataProviderClass = UserDataProvider.class, dataProvider = "CreateUserDataProvider", testName = "ValidateCreateAndUpdateUser", description = "Validate create and update user", groups = {USER})
+    @Test(enabled = true, alwaysRun = true, dataProviderClass = UserDataProvider.class, dataProvider = "CreateUserAndUpdateDataProvider", testName = "ValidateCreateAndUpdateUser", description = "Validate create and update user", groups = {USER})
     public void ValidateCreateAndUpdateUser(ArrayList<UserRequestDto> createUser, ArrayList<UserRequestDto> updateUser) throws APIException {
         UserResponseDto userResponseDto = userImpl.createUser(createUser);
         UserAssertionMethods.assertCreatedResponse(userResponseDto);

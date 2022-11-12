@@ -8,7 +8,7 @@ public enum Routes {
     v2_GET_USER("/v2/user/%s"),
     v2_POST_PET("/v2/pet"),
     v2_PUT_PET("/v2/pet"),
-    v2_GET_PET("/v2/pet/findByStatus?status=%s");
+    v2_GET_PET("/v2/pet/findByStatus");
 
     @Getter
     private String path;

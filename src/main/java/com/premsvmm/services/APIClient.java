@@ -18,9 +18,14 @@ public class APIClient {
             requestSpecBuilder.setContentType(apiRequestSpecification.getContentType());
         }
 
+        if (apiRequestSpecification.getQueryParams() != null) {
+            requestSpecBuilder.addQueryParams(apiRequestSpecification.getQueryParams());
+        }
+
         System.out.println("Request : ");
         System.out.println("HTTP METHOD :" + httpMethod);
         System.out.println("URL :" + apiRequestSpecification.getBaseUrl());
+        System.out.println("QUERY PARAM :" + apiRequestSpecification.getQueryParams());
         System.out.println("Body :" + apiRequestSpecification.getBody());
 
         return execute(apiRequestSpecification.getBaseUrl(), httpMethod, requestSpecBuilder.build());
