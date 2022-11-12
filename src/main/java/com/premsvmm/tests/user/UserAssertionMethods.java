@@ -14,12 +14,13 @@ public class UserAssertionMethods {
         softAssert.assertAll();
     }
 
-    public static void assertUpdateResponse(UserResponseDto responseDto){
+    public static void assertUpdateResponse(UserRequestDto userRequestDto,UserResponseDto responseDto){
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertEquals(responseDto.getCode(),200);
         softAssert.assertEquals(responseDto.getType(),"unknown");
-        softAssert.assertEquals(responseDto.getMessage(),"2");
+        softAssert.assertEquals(String.valueOf(userRequestDto.getId()),responseDto.getMessage());
         softAssert.assertAll();
+
     }
 
     public static void assertCreateUser(UserRequestDto request, UserResponseDto response) {

@@ -20,7 +20,7 @@ public class UserBase extends BaseTests {
     protected void updateUserAndValidate(ArrayList<UserRequestDto> updateUser) throws APIException {
         for (UserRequestDto userRequestDto : updateUser) {
             UserResponseDto userResponseDto = userImpl.updateUser(userRequestDto.getUserName(), userRequestDto);
-            UserAssertionMethods.assertUpdateResponse(userResponseDto);
+            UserAssertionMethods.assertUpdateResponse(userRequestDto,userResponseDto);
             getUserAndValidate(userRequestDto.getUserName(), userRequestDto);
         }
     }

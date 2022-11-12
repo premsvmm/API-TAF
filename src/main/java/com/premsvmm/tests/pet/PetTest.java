@@ -1,4 +1,4 @@
-package com.premsvmm.tests.pettests;
+package com.premsvmm.tests.pet;
 
 import com.premsvmm.dtos.pets.PetsRequestDTO;
 import com.premsvmm.dtos.pets.PetsResponseDTO;

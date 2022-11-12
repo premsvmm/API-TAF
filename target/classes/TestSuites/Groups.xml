@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Group Test" parallel="tests" thread-count="20">
+    <listeners>
+        <listener class-name="com.premsvmm.listeners.RetryListeners"></listener>
+        <listener class-name="com.premsvmm.listeners.TestCompletionLogger"></listener>
+    </listeners>
+
+    <test name="Group Tests" parallel="classes">
+        <packages>
+            <package name="com.premsvmm.tests.*"/>
+        </packages>
+    </test>
+</suite>
