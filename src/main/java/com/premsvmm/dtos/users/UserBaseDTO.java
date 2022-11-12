@@ -1,9 +1,15 @@
 package com.premsvmm.dtos.users;
 
 import com.google.gson.annotations.SerializedName;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.experimental.SuperBuilder;
 
 @Data
+@SuperBuilder
+@NoArgsConstructor
+@AllArgsConstructor
 public class UserBaseDTO {
     private Integer id;
     @SerializedName("username")

@@ -1,14 +1,14 @@
-package tests.user;
+package com.premsvmm.tests.user;
 
 import com.premsvmm.impls.UserImpl;
+import com.premsvmm.tests.*;
 import org.testng.annotations.BeforeClass;
-import tests.BaseTests;
 
-public class UserBase extends BaseTests {
+public class UserBase extends BaseTests{
     protected UserImpl userImpl;
 
     @BeforeClass(alwaysRun = true)
-    public void init(){
+    public void initUserBase() {
         userImpl = new UserImpl();
     }
 }
