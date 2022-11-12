@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="Functional Testcases" parallel="tests" thread-count="3">
+<suite name="Functional Testcases">
     <suite-files>
         <suite-file path="Users.xml">Test</suite-file>
         <suite-file path="Pets.xml">Test</suite-file>
