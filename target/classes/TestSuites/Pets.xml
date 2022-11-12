@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Pets Suites" parallel="tests" thread-count="20">
+    <listeners>
+        <listener class-name="com.premsvmm.listeners.RetryListeners"></listener>
+        <listener class-name="com.premsvmm.listeners.TestCompletionLogger"></listener>
+    </listeners>
+    <test name="Pets Tests" parallel="methods">
+        <packages>
+            <package name="com.premsvmm.tests.pet.*"/>
+        </packages>
+    </test>
+</suite>
