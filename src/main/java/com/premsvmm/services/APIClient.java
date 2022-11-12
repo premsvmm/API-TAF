@@ -17,6 +17,12 @@ public class APIClient {
         if (apiRequestSpecification.getContentType() != null) {
             requestSpecBuilder.setContentType(apiRequestSpecification.getContentType());
         }
+
+        System.out.println("Request : ");
+        System.out.println("HTTP METHOD :" + httpMethod);
+        System.out.println("URL :" + apiRequestSpecification.getBaseUrl());
+        System.out.println("Body :" + apiRequestSpecification.getBody());
+
         return execute(apiRequestSpecification.getBaseUrl(), httpMethod, requestSpecBuilder.build());
     }
 
@@ -27,6 +33,9 @@ public class APIClient {
             case GET -> response = RestAssured.given().spec(requestSpecification).baseUri(baseUrl).when().get();
             default -> new Exception("Method not implemented");
         }
+
+        System.out.println("Response : ");
+        response.getBody().prettyPrint();
         return response;
     }
 }
