@@ -11,7 +11,7 @@ import java.util.List;
 public class UserDataProvider {
 
 
-    @DataProvider(name = "CreateUserDataProvider")
+    @DataProvider(name = "CreateUserAndUpdateDataProvider")
     public Iterator<Object[]> createUser() {
         List<Object[]> addToList = new LinkedList<>();
         ArrayList<UserRequestDto> userCreate = userCreate();
