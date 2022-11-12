@@ -31,6 +31,7 @@ public class APIClient {
         switch (httpMethod) {
             case POST -> response = RestAssured.given().spec(requestSpecification).baseUri(baseUrl).when().post();
             case GET -> response = RestAssured.given().spec(requestSpecification).baseUri(baseUrl).when().get();
+            case PUT -> response = RestAssured.given().spec(requestSpecification).baseUri(baseUrl).when().put();
             default -> new Exception("Method not implemented");
         }
 
