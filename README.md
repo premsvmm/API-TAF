@@ -19,7 +19,7 @@ Some of the benefits stated below:
 
 **Architecture in High Level:**
 
-![Architecture](/asset/Backend_Automation_ Architecture.png)
+![Architecture](/asset/Backend_Automation_Architecture.png)
 
 **Execution:**
 
