@@ -19,11 +19,11 @@ Some of the benefits stated below:
 
 **Architecture in High Level:**
 
-![Architecture](/assets/Backend_Automation_ Architecture.png)
+![Architecture](/asset/Backend_Automation_ Architecture.png)
 
 **Execution:**
 
-![Execution](/assets/Execution.png)
+![Execution](/asset/Execution.png)
 
 **Improvements:**
 * Data provider for test from a different source (json,csv, dynamically generated data)
