@@ -9,6 +9,17 @@ import java.util.*;
 
 public class PetDataProvider {
 
+
+    /*
+    *  The data provider source can be from different stream.
+    *  1. Json
+    *  2. External source file
+    *  3. Randomly generated data or static data
+    *
+    *  The simply and to demonstrate working code have added a static data here.
+    *
+    * */
+
     @DataProvider(name = "CreateAndUpdatePetDataProvider")
     public Iterator<Object[]> createPet() {
         List<Object[]> addToList = new LinkedList<>();

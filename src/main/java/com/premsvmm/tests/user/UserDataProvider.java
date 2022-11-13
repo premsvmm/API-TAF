@@ -10,6 +10,16 @@ import java.util.List;
 
 public class UserDataProvider {
 
+    /*
+     *  The data provider source can be from different stream.
+     *  1. Json
+     *  2. External source file
+     *  3. Randomly generated data or static data
+     *
+     *  The simply and to demonstrate working code have added a static data here.
+     *
+     * */
+    
 
     @DataProvider(name = "CreateUserAndUpdateDataProvider")
     public Iterator<Object[]> createUser() {
