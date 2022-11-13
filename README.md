@@ -25,7 +25,7 @@ Architecture diagram represent the internal implementation of automation framewo
 
 **Execution:**
 
-The execution diagram explain about how this automation framework can be scalable.
+Execution diagram explain about realtime usage and integration.
 
 ![Execution](/asset/Execution.png)
 
@@ -35,3 +35,4 @@ The execution diagram explain about how this automation framework can be scalabl
 * Integration with test management tools
 * Secret management
 * Retry analyzer with specific exception format validation
+* implement beanshell to run priority or group based testcases.
