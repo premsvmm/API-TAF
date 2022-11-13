@@ -17,14 +17,16 @@ Some of the benefits stated below:
 2. Test implementation provide functionality to implement the test strategy based on feature/service.
 3. Each implementation represent a service. Hence the code patterns are not tightly coupled.
 
-**Architecuter in High Level:**
+**Architecture in High Level:**
 
+![Architecture](/assets/Backend_Automation_ Architecture.png)
 
 **Execution:**
 
+![Execution](/assets/Execution.png)
 
 **Improvements:**
-* Data provider for test from different source (json,csv, dynamically generated data)
+* Data provider for test from a different source (json,csv, dynamically generated data)
 * Concurrency test pattern implementation
 * Integration with test management tools
 * Secret management
