@@ -4,7 +4,7 @@ import com.premsvmm.dtos.users.UserRequestDto;
 import com.premsvmm.dtos.users.UserResponseDto;
 import com.premsvmm.exceptions.APIException;
 import com.premsvmm.impls.UserImpl;
-import com.premsvmm.tests.*;
+import com.premsvmm.tests.BaseTests;
 import org.testng.annotations.BeforeClass;
 
 import java.util.ArrayList;

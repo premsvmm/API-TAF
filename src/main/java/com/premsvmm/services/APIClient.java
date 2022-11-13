@@ -22,6 +22,7 @@ public class APIClient {
             requestSpecBuilder.addQueryParams(apiRequestSpecification.getQueryParams());
         }
 
+        // Logger can be implemented.
         System.out.println("Request : ");
         System.out.println("HTTP METHOD :" + httpMethod);
         System.out.println("URL :" + apiRequestSpecification.getBaseUrl());

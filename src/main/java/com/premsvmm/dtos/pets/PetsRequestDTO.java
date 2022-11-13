@@ -7,5 +7,5 @@ import lombok.experimental.SuperBuilder;
 @SuperBuilder
 @Data
 @ToString
-public class PetsRequestDTO extends PetsBaseDTO{
+public class PetsRequestDTO extends PetsBaseDTO {
 }

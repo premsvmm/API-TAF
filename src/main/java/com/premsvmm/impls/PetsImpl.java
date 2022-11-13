@@ -4,7 +4,6 @@ import com.google.gson.reflect.TypeToken;
 import com.premsvmm.controllers.Routes;
 import com.premsvmm.dtos.pets.PetsRequestDTO;
 import com.premsvmm.dtos.pets.PetsResponseDTO;
-import com.premsvmm.dtos.users.UserResponseDto;
 import com.premsvmm.enums.PetStatus;
 import com.premsvmm.exceptions.APIException;
 import com.premsvmm.services.*;
@@ -38,7 +37,6 @@ public class PetsImpl extends APIClient {
         return (PetsResponseDTO) APIUtilities.convertResponseToDto(response, PetsResponseDTO.class);
     }
 
-
     public ArrayList<PetsResponseDTO> getPet(PetStatus petStatus) throws APIException {
         Map<String, Object> queryParams = new HashMap<>();
         queryParams.put("status", petStatus.name());
@@ -49,8 +47,8 @@ public class PetsImpl extends APIClient {
                 .baseUrl(Routes.v2_GET_PET.PETSTORE());
         Response response = executeRequest(HttpMethod.GET, apiRequestSpecificationBuilder.build());
         APIResponseAssert.assertApiResponse(response, 200);
-        Type type = new TypeToken<ArrayList<PetsResponseDTO>>() {}.getType();
+        Type type = new TypeToken<ArrayList<PetsResponseDTO>>() {
+        }.getType();
         return (ArrayList<PetsResponseDTO>) APIUtilities.convertResponseToDto(response, type);
     }
-
 }
