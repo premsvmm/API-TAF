@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 import io.restassured.response.Response;
 
 import java.lang.reflect.Type;
+import java.util.Map;
 
 public class APIUtilities {
     private static Gson gson = new Gson();
@@ -18,5 +19,10 @@ public class APIUtilities {
 
     public static String convertDtoToJson(Object object) {
         return gson.toJson(object);
+    }
+
+    public static Map<Object, Object> convertDtoToMap(Object object) {
+        String json = convertDtoToJson(object);
+        return gson.fromJson(json, Map.class);
     }
 }
