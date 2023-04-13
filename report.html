@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Test Results</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<style>
+table {
+  margin-bottom: 0;
+}
+thead {
+  background-color: #007bff;
+  color: #fff;
+}
+th {
+  text-align: left;
+  padding: 12px;
+  font-weight: 500;
+  vertical-align: middle;
+}
+td {
+  vertical-align: middle;
+}
+#resultsTable tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+.form-control {
+  margin-bottom: 10px;
+}
+</style>
+</head>
+<body>
+<header class="container my-4">
+<h1 class="display-4">Test Results</h1>
+<p class="lead">Filter the results by entering a search term in the input field below:</p>
+<div class="form-group">
+<input type="search" id="filterInput" class="form-control" placeholder="Search">
+</div>
+</header>
+<main class="container">
+<div class="table-responsive">
+<table id="resultsTable" class="table table-bordered">
+<thead>
+<tr>
+<th>Class</th>
+<th>Method</th>
+<th>Service</th>
+<th>Feature</th>
+<th>Use Case</th>
+<th>Description</th>
+<th>Test Group</th>
+<th>Author</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>com.premsvmm.tests.pet.PetTest</td><td>ValidateCreateAndUpdatePet</td><td>test service</td><td>crud</td><td>create and update pet</td><td>create user- > assert the pet -> update pet and validate</td><td>[pet]</td></td></td><td>prem</td></tr>
+<tr><td>com.premsvmm.tests.pet.PetTest</td><td>assertSameResponseObject</td><td>test service</td><td>crud</td><td>assert same response object</td><td>create user- > assert the pet -> update pet and validate</td><td>[pet]</td></td></td><td>prem</td></tr>
+</tbody>
+</table>
+</div>
+</main>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script>
+$(document).ready(function(){
+  $('#filterInput').on('keyup', function() {
+    var value = $(this).val().toLowerCase();
+    $('#resultsTable tbody tr').filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+</body>
+</html>
